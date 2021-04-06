@@ -16,6 +16,29 @@
             "type": "python",
             "request": "launch",
             "module": "main"
+        },
+        {
+            "name": "Start celery",
+            "type": "python",
+            "request": "launch",
+            "module": "celery",
+            "args": [
+                "-A", "tasks",
+                "worker", "-E", 
+                "-l","INFO"
+            ]
+        },
+        {
+            "name": "Submit add task",
+            "type": "python",
+            "request": "launch",
+            "module": "main",
+            "args": [
+                "add-task", 
+                "--first", "10", 
+                "--second", "20"
+            ]
         }
+
     ]
 }
