@@ -1,7 +1,6 @@
 from commands import hello, read_file, add_task
 import click
 
-
 @click.group()
 def cli():
     pass
