@@ -1,11 +1,13 @@
 def _(val):
     return val
 
+
 def belobelo(func):
-    def inner (*args, **kwargs):
+    def inner(*args, **kwargs):
         print('Belo Belo...')
         func(*args, **kwargs)
     return inner
+
 
 def concatenate(**kwargs):
     result = ""
@@ -14,16 +16,20 @@ def concatenate(**kwargs):
         result += str(arg)
     return result
 
+
 def types(**kwargs):
     result = ""
     # Iterating over the Python kwargs dictionary
     for arg in kwargs.values():
-        result += str( type( arg) )
+        result += str(type(arg))
     return result
-    
+
 # unpacking_call.py
+
+
 def my_sum(a, b, c):
     print(a + b + c)
+
 
 @belobelo
 def main(*args, **kwargs):
@@ -34,6 +40,7 @@ def main(*args, **kwargs):
     print('is suka: %s' % is_suka)
     print("concatenate: %s" % concatenate(**kwargs))
     print("types: %s" % types(**kwargs))
+
 
 def others():
     my_list = [1, 2, 3]
@@ -57,7 +64,7 @@ def others():
 
     # merging_dicts.py
     my_first_dict = {"A": 1, "B": 2}
-    my_second_dict = {"C": 3, "D": 4, "A":0}
+    my_second_dict = {"C": 3, "D": 4, "A": 0}
     my_merged_dict = {**my_first_dict, **my_second_dict}
 
     print(my_merged_dict)
@@ -75,12 +82,12 @@ def others():
         "Tel": 2121231221,
         "Address": "My Place"
     }
-    print( " --- Val is: {x[a]} --- ".format( x={ "a":1, "test":"caccola" } ) )
-    print( "{name} ({Address})".format(**d))
+    print(" --- Val is: {x[a]} --- ".format(x={"a": 12, "test": "caccola"}))
+    print("{name} ({Address})".format(**d))
 
-    yeartoend = 2
-    print( _("End in +%dy") % yeartoend )
+    yeartoend = 5
+    print(_("End in +%dy") % yeartoend)
 
 
-main("test", 11,2,3, suka=12, minkia='aaa', peppo={'a':'xxx'})
+main("test!", 11, 12, 13, suka=12, minkia='aaa', peppo={'a': 'xxx'})
 others()
