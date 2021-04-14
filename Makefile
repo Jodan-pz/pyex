@@ -31,7 +31,10 @@ help: ## Display this help message
 ##
 
 compile: ./requirements/requirements.in ./requirements/dev-requirements.in ## Compile deps
-	cd ./requirements && pip-compile \
-					  && pip-compile dev-requirements.in
+	source ./env/bin/activate; \
+    cd ./requirements && pip-compile && pip-compile dev-requirements.in;
+	
 
-install: requirements/requirements.in requirements/dev-requirements.in ## Install deps
+install: requirements/requirements.txt requirements/dev-requirements.txt ## Install deps
+	source ./env/bin/activate; \
+    cd ./requirements && pip-sync requirements.txt dev-requirements.txt;
