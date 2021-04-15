@@ -1,6 +1,6 @@
+
 def _(val):
     return val
-
 
 def belobelo(func):
     def inner(*args, **kwargs):

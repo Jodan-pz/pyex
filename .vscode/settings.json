@@ -1,3 +1,12 @@
 {
-    "python.pythonPath": "env/bin/python"
+    "python.pythonPath": "env/bin/python",
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}:${env:PYTHONPATH}"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}:${env:PYTHONPATH}"
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder};${env:PYTHONPATH}"
+    },
 }
