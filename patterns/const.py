@@ -3,11 +3,12 @@ import os
 
 a = calendar.MONDAY
 
-print( "%d" % a)
+print("%d" % a)
+print(f"Value is: {a}")
 
 c = frozenset(range(12))
 
-print ( c )
+print(c)
 
-print ( os.path.dirname(__file__) )
-print  ( __name__  )
+print(os.path.dirname(__file__))
+print(__name__)
