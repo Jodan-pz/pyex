@@ -5,6 +5,10 @@ from pprint import pprint
 a = calendar.MONDAY
 
 print("%d" % a)
+<<<<<<< HEAD
+=======
+print(f"Value is: {a}")
+>>>>>>> e89ee68a1729421787c2c382dedb0d4fab3b0e31
 
 c = frozenset(range(12))
 
