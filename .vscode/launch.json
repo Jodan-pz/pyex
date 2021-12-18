@@ -4,7 +4,6 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
         {
             "name": "Python: File corrente",
             "type": "python",
@@ -24,9 +23,12 @@
             "request": "launch",
             "module": "celery",
             "args": [
-                "-A", "tasks",
-                "worker", "-E", 
-                "-l","INFO"
+                "-A",
+                "tasks",
+                "worker",
+                "-E",
+                "-l",
+                "INFO"
             ]
         },
         {
@@ -35,11 +37,12 @@
             "request": "launch",
             "module": "main",
             "args": [
-                "add-task", 
-                "--first", "10", 
-                "--second", "20"
+                "add-task",
+                "--first",
+                "10",
+                "--second",
+                "20"
             ]
         }
-
     ]
 }
