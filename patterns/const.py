@@ -5,10 +5,7 @@ from pprint import pprint
 a = calendar.MONDAY
 
 print("%d" % a)
-<<<<<<< HEAD
-=======
 print(f"Value is: {a}")
->>>>>>> e89ee68a1729421787c2c382dedb0d4fab3b0e31
 
 c = frozenset(range(12))
 
@@ -22,6 +19,7 @@ pprint(loll, sort_dicts=0)
 print(loll)
 
 
-x = lambda a, b, c:  f"{a},{b} {c}"
+def x(a, b, c): return f"{a},{b} {c}"
 
-print( x(1,2,3) )
+
+print(x(1, 2, 3))
